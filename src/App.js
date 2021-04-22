@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+
+const { default: ColorDisplay } = require("./components/ColorDisplay");
+const { default: ColorSimpleControls } = require("./components/ColorSimpleControls");
+const { default: CounterAdvancedControls } = require("./components/CounterAdvancedControls");
+const { default: CounterDisplay } = require("./components/CounterDisplay");
+const { default: CounterSimpleControls } = require("./components/CounterSimpleControls");
+const { default: SliderControls } = require("./components/SliderControls");
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+     <ColorDisplay/>
+     <ColorSimpleControls/>
+     <SliderControls/>
+     <CounterDisplay/>
+     <CounterSimpleControls/>
+     <CounterAdvancedControls/>
+     
+     
+     
     </div>
   );
 }
