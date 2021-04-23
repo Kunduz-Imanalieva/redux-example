@@ -7,6 +7,8 @@ const { default: CounterAdvancedControls } = require("./components/CounterAdvanc
 const { default: CounterDisplay } = require("./components/CounterDisplay");
 const { default: CounterSimpleControls } = require("./components/CounterSimpleControls");
 const { default: SliderControls } = require("./components/SliderControls");
+const { default: TextDisplay } = require("./components/TextDisplay");
+const { default: TextSimpleControls } = require("./components/TextSimpleControls");
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
      <CounterDisplay/>
      <CounterSimpleControls/>
      <CounterAdvancedControls/>
+     <TextDisplay/>
+     <TextSimpleControls/>
      
      
      

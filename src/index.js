@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import App from './App';
+import counterReducer from './redux/counterReducer';
+import colorReducer from './redux/colorReducer';
 import reportWebVitals from './reportWebVitals';
+import textReducer from './redux/textReducer';
 
-const rootReducer = combineReducers({counterReducer, colorReducer});
-const rootReducer = createStore();
-const store = createStore();
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  color: colorReducer,
+  text: textReducer
+});
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
