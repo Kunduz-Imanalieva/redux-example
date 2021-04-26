@@ -8,10 +8,6 @@ const initialState = {
         case "set_color":
         newState.color = action.color;
         return newState;
-  
-        case "range_color":
-        newState.color = action.color;
-        return newState;
     
       default:
         break;
