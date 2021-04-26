@@ -14,8 +14,8 @@ const counterReducer = (state = initialState, action) => {
     case "increment_by_1":
       newState.number++;
       return newState;
-    case "increment_by_10":
-      newState.number += 10;
+    case "decrement_by_1":
+      newState.number--;
       return newState;
     default:
       break;
