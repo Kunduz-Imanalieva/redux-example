@@ -12,4 +12,12 @@ export const remove = (id) => ({
   id: id
 });
 
+export const delay = (text) => {
+    return (dispatch) => {
+      setTimeout(() => {
+        dispatch(add(text));
+      }, 3000);
+    }
+  } 
+
 export default todo
