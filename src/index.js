@@ -7,13 +7,15 @@ import counterReducer from './redux/counterReducer';
 import colorReducer from './redux/colorReducer';
 import reportWebVitals from './reportWebVitals';
 import textReducer from './redux/textReducer';
+import todo from './redux/reducers/todo';
 
-const rootReducer = combineReducers({
-  counter: counterReducer,
-  color: colorReducer,
-  text: textReducer
-});
-const store = createStore(rootReducer);
+const store = createStore(todo);
+// const rootReducer = combineReducers({
+//   counter: counterReducer,
+//   color: colorReducer,
+//   text: textReducer
+// });
+// const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
