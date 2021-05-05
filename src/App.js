@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { delay, remove } from "./redux/actions/todo";
+import { delay, removeDelay } from "./redux/actions/todo";
 
 
 const { default: ColorDisplay } = require("./components/ColorDisplay");
@@ -16,7 +16,7 @@ function App() {
   const dispatch = useDispatch();
 
   function onRemoveCallback(id) {
-    dispatch(remove(id));
+    dispatch(removeDelay(id));
   }
 
   function onAddCallback(event) {

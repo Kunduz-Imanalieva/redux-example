@@ -20,4 +20,12 @@ export const delay = (text) => {
     }
   } 
 
+  export const removeDelay = (id) => {
+    return (dispatch) => {
+      setTimeout(() => {
+        dispatch(remove(id));
+      }, 3000);
+    }
+}
+
 export default todo
