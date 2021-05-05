@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import App from './App';
-import counterReducer from './redux/counterReducer';
-import colorReducer from './redux/colorReducer';
+// import counterReducer from './redux/counterReducer';
+// import colorReducer from './redux/colorReducer';
 import reportWebVitals from './reportWebVitals';
-import textReducer from './redux/textReducer';
-import todo from './redux/reducers/todo';
+// import textReducer from './redux/textReducer';
+import todo from './redux/actions/todo';
 
 const store = createStore(todo);
 // const rootReducer = combineReducers({
