@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { delay, removeDelay } from "./redux/actions/todo";
+import { addDelay, removeDelay, toggle } from "./redux/actions/todo";
 
 
 const { default: ColorDisplay } = require("./components/ColorDisplay");
@@ -23,12 +23,21 @@ function App() {
     event.preventDefault();
 
     const data = new FormData(event.target);
-    dispatch(delay(data.get('new')));
+    dispatch(addDelay(data.get('new')));
   }
+
+  function onToggleCallback(id) {
+    dispatch(toggle(id));
+  }
+
+  
 
   const results = Object.keys(items).map(id => (
     <li key={id}>
-      <span>{items[id]}</span>
+      <span onClick={() => onToggleCallback(id)} style={{
+        cursor: "pointer",
+        textDecoration: items[id].done ? "line-through" : "none"
+      }}>{items[id].text}</span>
       <button onClick={() => onRemoveCallback(id)}>Remove</button>
     </li>
   ));
